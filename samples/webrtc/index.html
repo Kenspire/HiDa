@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>QuickBlox JavaScript WebRTC sample</title>
+    <title>HiDa! | Simple & Secure Video and Audio Conferences</title>
 
-    <link rel="canonical" href="https://quickblox.github.io/quickblox-javascript-sdk/samples/webrtc"/>
-    <link rel="shortcut icon" href="https://quickblox.com/favicon.ico">
+    
+    <link rel="shortcut icon" href="https://siddevelop.github.io/HiDa/samples/chat/img/Icon-1024.png">
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css">
@@ -21,10 +21,10 @@
     <header class="header">
         <div class="inner">
             <div class="header__logo">
-                <img class="header__logo_img" src="images/Logo_qb.svg"/>
+                <img class="header__logo_img" src="images/Icon-1024.png"/>
             </div>
 
-            <h2 class="header__title">JavaScript WebRTC Sample</h2>
+            <h2 class="header__title">HiDa! | Simple & Secure Video and Audio Conferences</h2>
             <span class="j-version header_version"></span>
         </div>
     </header>
@@ -34,24 +34,23 @@
             <!-- JOIN -->
             <form class="join j-join">
                 <h3 class="join__title">
-                    <p>Please enter Username and login</p>
+                    <p>Enter your Name and Mobile Number</p>
                     <p class="join__notice">
-                        Use several browsers to simulate several users.
+                        Join now to conference with your partners.
                     </p>
                 </h3>
 
                 <div class="join__body">
                     <div class="join__row">
-                        <input type="text" class="join__input j-join__username" name="username" placeholder="Username"
+                        <input type="text" class="join__input j-join__username" name="username" placeholder="Name"
                                autofocus required
-                               title="Field should contain alphanumeric characters only in a range 3 to 20. The first character must be a letter."
+                               title="Field should contain a valid name only in the range 3 to 20. The first character must be a letter."
                                pattern="^[a-zA-Z][\w]{2,19}$">
                     </div>
 
                     <div class="join__row">
-                        <input type="text" class="join__input j-join__login" name="login" placeholder="login" required
-                               title="Field should contain alphanumeric characters only in a range 3 to 20. The first character must be a letter."
-                               pattern="^[a-zA-Z][\w]{2,19}$">
+                        <input type="text" class="join__input j-join__login" name="login" placeholder="Mobile Number" required
+                               title="Field should contain only a valid mobile number.">
                     </div>
 
                     <div class="join__row">
@@ -85,7 +84,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                 </button>
 
-                <h4>Connect is failed</h4>
+                <h4>Connection failed</h4>
             </div>
 
             <div class="modal-body">
@@ -95,7 +94,7 @@
                 </p>
 
                 <p class="text-danger">
-                    Something wrong with connect. Check internet connection or server credentials and trying again.
+                    There was an error with connecting. Please check internet connection and try again.
                 </p>
             </div>
             <p></p>
@@ -111,12 +110,12 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                 </button>
 
-                <h4>Connect to chat is failed</h4>
+                <h4>Connection to server failed</h4>
             </div>
 
             <div class="modal-body">
                 <p class="text-danger">
-                    Something wrong with connect to chat. Check internet connection or user info and trying again.
+                    Something wrong with connecting to server. Check internet connection or user info and try again.
                 </p>
             </div>
             <p></p>
@@ -134,7 +133,7 @@
             </div>
 
             <div class="modal-body">
-                <p class="text-danger">User has already authorized.</p>
+                <p class="text-danger">Mobile Number is already in use</p>
             </div>
         </div>
     </div>
@@ -199,7 +198,7 @@
 </script>
 
 <script type="text/template" id="tpl_device_not_found">
-    Error: devices (camera or microphone) are not found.
+    Error: Required devices (camera or microphone) are not found.
     <span class="qb-text">Login in <b>as <%=name%></b></span>
     <button class='fw-link j-logout'>Logout</button>
 </script>
@@ -335,9 +334,8 @@
                 </button>
 
                 <p class="sample_info">
-                    The recording time is 10 minutes maximum.
-                    Check out a <a href="https://github.com/QuickBlox/javascript-media-recorder" target="_blank">recorder</a>
-                    if want more.
+                    The recording time is 1 hour maximum.
+                    
                 </p>
             </div>
 
@@ -437,7 +435,7 @@
         <p class="frames_callee__name"><%=name%></p>
 
         <div class="frames_callee__bitrate">
-            <span id="bitrate_<%=userID%>">0</span> kbps
+            <span id="bitrate_<%=userID%>">10 to 20</span> kbps
         </div>
     </div>
 </script>
@@ -462,7 +460,7 @@
 
 <!-- hack for github Pages -->
 <script>
-    var host = "quickblox.github.io";
+    var host = "kenspire.github.io";
     if ((host == window.location.host) && (window.location.protocol != "https:"))
         window.location.protocol = "https";
 </script>

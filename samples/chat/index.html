@@ -33,21 +33,19 @@
 
                     <form name="loginForm" class="login__form">
                         <div class="login_form__row">
-                            <label for="userLogin">Login</label>
+                            <label for="userLogin">Mobile Number</label>
                             <input
-                                type="text"
+                                type="number"
                                 id="userLogin"
                                 name="userLogin"
-                                minlength="3"
-                                maxlength="15"
-                                pattern='^[a-zA-Z]{1}[a-zA-Z0-9]+$'
-                                title="Field should contain alphanumeric characters only in a range 3-15. The first character must be a letter."
+                                minlength="5"
+                                title="Field should contain only a valid mobile number."
                                 required
                             />
                         </div>
                         <div class="login_form__row">
-                            <label for="userName">User name</label>
-                            <input type="text" id="userName" name="userName" minlength="3" maxlength="15" required />
+                            <label for="userName">Name</label>
+                            <input type="text" id="userName" name="userName" minlength="3" maxlength="20" required />
                         </div>
                         <div class="login__button_wrap">
                             <button type="submit" name="login_submit" class="btn m-login__button j-login__button" disabled>
